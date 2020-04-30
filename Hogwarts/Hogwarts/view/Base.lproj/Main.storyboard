@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jxk-KG-qfj">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Student List Table View Controller-->
+        <scene sceneID="C80-s4-phF">
+            <objects>
+                <tableViewController id="Jxk-KG-qfj" customClass="StudentListTableViewController" customModule="Hogwarts" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nCs-RR-erQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" rowHeight="160" id="jIq-SN-x10" customClass="StudentTableViewCell" customModule="Hogwarts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="160"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jIq-SN-x10" id="1f0-wp-DEc">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JjO-pV-zV6">
+                                            <rect key="frame" x="4" y="0.0" width="406" height="160"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rRh-to-16S">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="120" id="iTf-SL-I25"/>
+                                                        <constraint firstAttribute="height" constant="120" id="zlK-mq-J9v"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yP6-pc-fie">
+                                                    <rect key="frame" x="128" y="0.0" width="278" height="160"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(student name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDx-lr-ZyO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="278" height="128"/>
+                                                            <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(house name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6e-Xx-s3Z">
+                                                            <rect key="frame" x="0.0" y="128" width="278" height="32"/>
+                                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DDx-lr-ZyO" firstAttribute="height" secondItem="rRh-to-16S" secondAttribute="height" multiplier="0.8" id="E0O-Jj-7N4"/>
+                                                <constraint firstItem="yP6-pc-fie" firstAttribute="bottom" secondItem="rRh-to-16S" secondAttribute="bottom" id="RNy-fE-FyY"/>
+                                                <constraint firstAttribute="bottom" secondItem="yP6-pc-fie" secondAttribute="bottom" id="SNN-P5-728"/>
+                                                <constraint firstItem="yP6-pc-fie" firstAttribute="leading" secondItem="rRh-to-16S" secondAttribute="trailing" constant="4" id="Xl0-YQ-ccX"/>
+                                                <constraint firstItem="yP6-pc-fie" firstAttribute="top" secondItem="rRh-to-16S" secondAttribute="top" id="p7s-Qx-JZJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="yP6-pc-fie" secondAttribute="trailing" constant="4" id="u3u-9s-Rq0"/>
+                                                <constraint firstItem="yP6-pc-fie" firstAttribute="top" secondItem="JjO-pV-zV6" secondAttribute="top" id="zIN-2f-k9N"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="JjO-pV-zV6" firstAttribute="top" secondItem="1f0-wp-DEc" secondAttribute="top" id="CmY-o5-kcy"/>
+                                        <constraint firstAttribute="trailing" secondItem="JjO-pV-zV6" secondAttribute="trailing" constant="4" id="Dr0-z2-5ku"/>
+                                        <constraint firstAttribute="bottom" secondItem="JjO-pV-zV6" secondAttribute="bottom" id="Gio-rF-DN9"/>
+                                        <constraint firstItem="JjO-pV-zV6" firstAttribute="leading" secondItem="1f0-wp-DEc" secondAttribute="leading" constant="4" id="Se9-0p-IwO"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="studentHouse" destination="x6e-Xx-s3Z" id="qoq-uu-Nck"/>
+                                    <outlet property="studentHouseImage" destination="rRh-to-16S" id="SST-Uu-Vdx"/>
+                                    <outlet property="studentName" destination="DDx-lr-ZyO" id="Bvm-D5-xsZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Jxk-KG-qfj" id="SKd-EH-CP6"/>
+                            <outlet property="delegate" destination="Jxk-KG-qfj" id="sf4-OF-M5a"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H2a-Ty-AhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231.8840579710145" y="142.63392857142856"/>
+        </scene>
+    </scenes>
+</document>
